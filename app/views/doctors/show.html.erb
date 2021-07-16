@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+<% @doctor.appointments.each_with_index do | appts, i | %>
+<%= link_to appts.appointment_datetime_dr_string, appointment_path(appts) %>
+<%= link_to appts.patient_name, patient_path(appts.patient) %>
+<br>
+<% end %>
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>

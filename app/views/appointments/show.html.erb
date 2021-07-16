@@ -1,0 +1,4 @@
+<p id="notice"><%= notice %></p>
+<%=link_to @appointment.doctor_name, doctor_path(@appointment.doctor)%>
+<%=link_to @appointment.patient_name, patient_path(@appointment.patient)%>
+<%=@appointment.appointment_datetime_string%>
